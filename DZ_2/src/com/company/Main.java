@@ -7,6 +7,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        int count = 0;
         int firstTicket = 1001; //первый возможный счастливый билет
         int lastTicket = 999999; //последний билет
         String formatString = String.format ("%%0%dd", 6); //формат строки с лидирующими нулями
@@ -22,7 +23,10 @@ public class Main {
             if (leftSum == rightSum) {
                 String formattedString = String.format(formatString, firstTicket);
                 System.out.println(formattedString);
+                count++;
             }
+
         }
+        System.out.println(count);
     }
 }
