@@ -5,6 +5,9 @@ package com.company;
  */
 
 
+// импорт другого пакета
+import University.Student; // далее именовать пакеты с маленькой буквы
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,5 +20,10 @@ public class Main {
         s1.show();
         // создание объекта и вызов метода, без сохранения куда-либо
         new Student("Иван_2", "Иванов", 3).show();
+
+        s.setCourse(100); // кривой курс
+        s.show();
+
+        Student.showClass(); // статический метод класса
     }
 }
