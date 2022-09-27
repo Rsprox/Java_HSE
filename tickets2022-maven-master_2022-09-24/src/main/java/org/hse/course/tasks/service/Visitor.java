@@ -40,10 +40,10 @@ class OddTicketVisitorFactory implements Visitor.Factory<Ticket, Boolean> {
 
     @Override
     public Visitor<Ticket, Boolean> getInstance() {
-        return new OddTicketVisitorFactory.OddTicketVisitorImpl();
+        return new OddTicketVisitorImpl();
     }
 
-    private class OddTicketVisitorImpl implements Visitor<Ticket, Boolean> {
+    private static class OddTicketVisitorImpl implements Visitor<Ticket, Boolean> {
 
         @Override
         public Boolean visit(Ticket item) {
